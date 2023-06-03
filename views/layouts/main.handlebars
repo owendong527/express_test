@@ -1,0 +1,51 @@
+{{!-- main 這裡是大部分畫面沒有變的地方，不管哪一頁都會套用這裡的佈局 --}}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Express Test</title>
+    {{!-- link:css按tab產生的 --}}
+    <link rel="stylesheet" href="/stylesheets/bootstrap.css">
+</head>
+<body>
+
+<header class="d-flex justify-content-between px-5 m-3">
+  <a href="/" class="btn btn-secondary">回到首頁</a>
+  <div class="d-flex"> 
+    <a href="/about" class="btn btn-secondary"><span></span>about</a>
+    <a href="/portfolio" class="btn btn-secondary"><span></span>portfolio</a>
+    <a href="/contact" class="btn btn-secondary active">s<pan ></span>contact</a>
+  </div>
+</header>
+
+{{!-- <div>
+    <span class="badge text-bg-primary">回到首頁</span>
+    <span class="badge text-bg-info">About</span>
+    <span></span>
+</div> --}}
+
+
+ {{!-- <!-- nav bar -->    
+<div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
+  <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off">
+  <label class="btn btn-outline-primary" for="btncheck1">About</label>
+
+  <input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off">
+  <label class="btn btn-outline-primary" for="btncheck2">Portfolio</label>
+
+  <input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off">
+  <label class="btn btn-outline-primary" for="btncheck3">Contact</label>
+</div> --}}
+
+{{!-- 這裡面的body稍後都會被partial templated所取代掉 --}}
+{{!-- partial template會在views資料夾裡面，handlebars會自動幫我去載入views資料夾 --}}
+{{{body}}}
+
+
+{{!-- script:src --}}
+<script src="/javascripts/popper.js"></script>
+<script src="/javascripts/bootstrap.js"></script>
+</body>
+</html>
